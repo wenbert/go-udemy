@@ -3,14 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	//var card string = "Ace of Spades
-	cards := deck{newCard(), newCard()}
-	cards = append(cards, "Six of Spades")
+	cards := newDeck()
+	cards.saveToFile("my_cards.txt")
+	fmt.Println(cards.toString())
 
-	//fmt.Println(cards)
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	// hand.print()
+	// remainingCards.print()
 }
 
 func newCard() string {
